@@ -10,6 +10,29 @@
             <a class="link"><div>Link</div></a>
             <a class="link"><div>Link</div></a>
             <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
+            <a class="link"><div>Link</div></a>
         </nav>
         <div class="corkboard">
             <div class="polaroid" title="dawg">
@@ -39,6 +62,9 @@
     <style>
         body {
             background: url(wood-bg.jpg) repeat;
+            max-width: 60em;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
         }
         .link {
             background: red;
@@ -48,6 +74,7 @@
             margin: 30px;
             -webkit-transform: rotate(20deg);
             box-shadow: 6px 6px 30px 5px rgba(0,0,0,0.6);
+            -webkit-transition: all 0.8s;
         }
         .link:before {
             content: "";
@@ -69,6 +96,20 @@
             left: -15px;
             top: 39%;
         }
+        .link:nth-child(even) {
+            -webkit-transform: rotate(10deg);
+            background: blue;
+        }
+        .link:nth-child(even):before {
+            border-color: transparent blue transparent transparent;
+        }
+        .link:nth-child(3n) {
+            -webkit-transform: rotate(-15deg);
+            background: purple;
+        }
+        .link:nth-child(3n):before {
+            border-color: transparent purple transparent transparent;
+        }
         .link > div {
             background: white;
             height: 2em;
@@ -83,6 +124,9 @@
             margin: 0.25em;
             padding: 0 10px;
         }
+        .link:hover {
+            -webkit-transform: rotate(360deg);
+        }
         .corkboard {
             background-image: url(cork-board.jpg);
             background-repeat: repeat;
@@ -92,7 +136,6 @@
 	        border-image-slice: 50 65;
             border-width: 30px;
             position: relative;
-            margin-top: 505px;
             box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.3), 0px 10px 30px 4px rgba(0,0,0,0.7);
             outline: solid 1px #9b5e43;
             outline-offset: -1px;
@@ -112,12 +155,18 @@
             z-index: -1;
         }
         .corkboard:after {
-            content: "More";
-            background: red;
+            content: "have a dog";
+            background: #ff3f3f;
+            color: white;
+            padding: 5px;
+            border: dotted 5px white;
+            outline: solid #ff3f3f 5px;
+            font-size: 120%;
             position: absolute;
-            bottom: 10;
-            right: 10;
+            top: -35;
+            right: 50%;
             font-family: inherit;
+            -webkit-transform: translateX(50%);
             box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.6);
         }
         .polaroid:after {
@@ -139,7 +188,7 @@
             right: 50%;
         }
         .polaroid {
-            background: #fff;
+            background: #fafafa;
             margin: 30px 24px 30px 24px;
             height: 150px;
             padding: 10px 10px 15px;
