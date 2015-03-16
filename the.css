@@ -1,0 +1,216 @@
+body {
+    background: url(img/wood-floor.jpg) repeat;
+    max-width: 60em;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 7px;
+}
+header {
+    margin: 30px;
+    background: #fafafa;
+    -webkit-transform: rotate(-5deg);
+    padding: 10px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+    background-size: 100% 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+}
+header > * {
+    font-family: "Comic Sans", "Comic Sans MS", sans-serif;
+    font-size: 60pt;
+    color: #2e2e2e;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.59);
+}
+header > div {
+    -webkit-transform: rotate(-0deg);
+    display: inline-block;
+}
+header:before, header:after {
+    content: "";
+    position: absolute; 
+    background-color: rgba(220,212,176,0.85); 
+    height: 25px;
+    width: 150px;
+    -webkit-transform: rotate(-45deg);
+}
+header:after {
+    bottom: 0px;
+    right: -50px;
+}
+header:before {
+    top: 0px;
+    left: -50px;
+}
+nav {
+
+}
+nav > span {
+    padding: 4px;
+    color: white;
+    background: #3f89ff;
+    border: dotted #fafafa 5px;
+    outline: solid #3f89ff 5px;
+    font-size: 120%;
+    margin: 30px;
+    float: right;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.6);
+}
+footer {
+    margin: 30px;
+    background: #fafafa;
+    -webkit-transform: rotate(1deg);
+    padding: 10px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+    background-size: 100% 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+}
+.link {
+    background: red;
+    height: 3em;
+    display: inline-block;
+    position: relative;
+    margin: 30px;
+    -webkit-transform: rotate(20deg);
+    box-shadow: 6px 6px 30px 5px rgba(0,0,0,0.6);
+    -webkit-transition: all 0.4s;
+    text-decoration: none;
+    color: inherit;
+}
+.link:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 30px 1.5em 0;
+    border-color: transparent red transparent transparent;
+    position: absolute;
+    left: -30px;
+}
+.link:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: url(img/wood-floor.jpg);
+    position: absolute;
+    left: -15px;
+    top: 39%;
+}
+.link:nth-child(even) {
+    -webkit-transform: rotate(10deg);
+    background: blue;
+}
+.link:nth-child(even):before {
+    border-color: transparent blue transparent transparent;
+}
+.link:nth-child(3n) {
+    -webkit-transform: rotate(-15deg);
+    background: purple;
+}
+.link:nth-child(3n):before {
+    border-color: transparent purple transparent transparent;
+}
+.link > div {
+    background: white;
+    height: 2em;
+    font-family: "Comic Sans", "Comic Sans MS", sans-serif;
+    font-size: 120%;
+    text-align: center;
+    border-radius: 5px;
+    background-size: 100% 12px;
+    line-height: 2em;
+    box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.3);
+    margin: 0.25em;
+    padding: 0 10px;
+}
+.link:hover {
+    -webkit-transform: rotate(0deg);
+}
+.corkboard {
+    background-image: url(img/cork-board.jpg);
+    background-repeat: repeat;
+    background-size: 90px;
+    border-color: transparent;
+    border-image-source: url(img/wood-frame.jpg);
+    border-image-slice: 50 65;
+    border-width: 30px;
+    position: relative;
+    box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.3), 0px 10px 30px 4px rgba(0,0,0,0.7);
+    outline: solid 1px #9b5e43;
+    outline-offset: -1px;
+}
+.corkboard:before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #2a2a2a transparent transparent #2a2a2a;
+    top: -100px;
+    right: 50%;
+    -webkit-transform: translateX(50%) rotate(45deg);
+    z-index: -1;
+}
+.corkboard:after {
+    content: "Dogs up for adoption";
+    font-family: "Comic Sans", "Comic Sans MS", sans-serif;
+    padding: 1px 4px;
+    color: white;
+    background: #ff3f3f;
+    position: absolute;
+    border: dotted #fafafa 5px;
+    outline: solid #ff3f3f 5px;
+    font-size: 120%;
+    top: -35px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.6);
+}
+.polaroid:after {
+    content: attr(title);
+    font-family: "Comic Sans", "Comic Sans MS", sans-serif;
+    width: 100%;
+    display: block;
+    font-size: 130%;
+}
+.polaroid:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 50%;
+    width: 10px;
+	height: 10px;
+	background-color: #f33;
+	background-image: linear-gradient(rgba(100,0,0,0), rgba(255,90,90,1));
+	border-radius: 100%;
+	box-shadow: 0 0 0 1px #c00, inset 0 1px 1px rgba(255,255,255,.6), 0 2px 2px rgba(0,0,0,.4);
+}
+.polaroid {
+    background: #fafafa;
+    margin: 30px 24px 30px 24px;
+    height: 150px;
+    padding: 10px 10px 15px;
+    text-align: center;
+    color: #2a2a2a;
+    -webkit-transform: rotate(-2deg);
+    display: inline-block;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.6);
+}
+.polaroid img {
+    height: 130px;
+}
+.polaroid:nth-child(even) {
+    -webkit-transform: rotate(2deg);
+}     
+.polaroid:nth-child(even):before {
+    left: 50%;
+    background: orange;
+}
+.polaroid:nth-child(3n) {
+    -webkit-transform: rotate(5deg);
+}     
+.polaroid:nth-child(3n):before {
+    left: 60%;
+    background: #ff6f6f;
+}
